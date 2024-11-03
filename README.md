@@ -7,4 +7,6 @@ latexmk -xelatex gantt.tex
 latexmk -c gantt.tex
 ```
 
-to make `gantt.pdf` and convert it to `gantt.png` also.
+to make `gantt.pdf` and convert it to `gantt.png` also
+
+![](gantt.png)
