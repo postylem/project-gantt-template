@@ -1,0 +1,61 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass{standalone}
+\usepackage{fontspec}
+\setmainfont{Palatino}
+\usepackage{pgfgantt}
+\begin{document}
+
+\begin{ganttchart}[
+  vgrid={*1{gray, dotted}},
+  inline,
+  newline shortcut=false,
+  time slot format=isodate-yearmonth,
+  time slot unit=month,
+  y unit title=0.7cm,
+  y unit chart=0.6cm,
+  canvas/.style={},
+  group/.append style={draw=blue!20, fill=blue!20},
+  group top shift=.9,
+  group height=.075,
+  group left shift=0,
+  group right shift=0,
+  group peaks tip position=0,
+  group peaks height=.1,
+  group inline label node/.append style={align=right, left=0mm},
+  group inline label anchor={west},
+  bar/.append style={draw=gray!40, fill=blue!05, rounded corners=3pt},
+  bar inline label node/.append style={align=left, right=0mm},
+  bar inline label anchor={west},
+  bar height=0.75,
+  milestone inline label node/.append style={left=1.5mm},
+  milestone left shift=.75,
+  milestone right shift=.25,
+  milestone top shift=.5,
+  ]{2024-05}{2026-09}
+  \gantttitlecalendar{year, month}\ganttnewline
+  %
+  \ganttgroup{Objective 1}{2024-09}{2025-04}\ganttnewline
+  \ganttbar{lit review}{2024-09}{2024-12}
+    \ganttbar{analysis / writing}{2025-01}{2025-04}\ganttnewline
+  \ganttbar{target construction collation}{2024-10}{2024-12}\ganttnewline
+  \ganttmilestone[milestone left shift=.25, milestone right shift=-.25]{Present  Obj.\ 1 at LabEx}{2025-03}\ganttnewline
+  \ganttmilestone[milestone left shift=.25, milestone right shift=-.25]{Present  Obj.\ 1 SomeConference 2025}{2025-07}\ganttnewline
+  %
+  \ganttgroup{Objective 2}{2025-02}{2026-03}\ganttnewline
+  \ganttbar{lit review}{2025-02}{2025-06}
+    \ganttbar{data collection}{2025-09}{2025-11}\ganttnewline
+  \ganttbar{experiment design}{2025-04}{2025-09}
+    \ganttbar{analysis / writing}{2025-12}{2026-03}\ganttnewline
+  \ganttmilestone[milestone left shift=.25, milestone right shift=-.25]{Present Obj.\ 2 SomeConference 2026}{2026-07}\ganttnewline
+  %
+  \ganttgroup{Objective 3}{2025-06}{2026-08}\ganttnewline
+  \ganttbar{lit review and model design}{2025-06}{2025-12}
+    \ganttbar{analysis / writing}{2026-04}{2026-08}\ganttnewline
+  \ganttbar{simulation}{2025-09}{2026-01}\ganttnewline
+  \ganttbar{experiment design}{2025-08}{2025-12}
+      \ganttbar{data collection}{2026-02}{2026-05}\ganttnewline
+  \ganttmilestone[milestone left shift=.25, milestone right shift=-.25]{Present  Obj.\ 3 AnotherConference 26}{2026-03}
+\end{ganttchart}
+
+\end{document}
