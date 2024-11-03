@@ -1,4 +1,4 @@
-Make a gantt chart with LaTeX package [`ganttpgf`](https://ctan.org/pkg/pgfgantt), and export as png (via [ImageMagick](https://imagemagick.org/index.php) ^v7)
+Make a gantt chart with LaTeX package [`pgfgantt`](https://ctan.org/pkg/pgfgantt), and export as png (via [ImageMagick](https://imagemagick.org/index.php) ^v7)
 
 Run:
 
